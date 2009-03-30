@@ -50,7 +50,7 @@ module Workling
     # thanks to blaine cook for this suggestion.
     def self.method_missing(method, *args, &block)
       if method.to_s =~ /^asynch?_(.*)/
-        Workling::Remote.run(self.to_s.dasherize, $1, *args)
+        Workling::Remote.run(self.to_s.snake_case, $1, *args)
       else
         super
       end

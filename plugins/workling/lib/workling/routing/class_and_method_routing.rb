@@ -20,13 +20,17 @@ module Workling
       end
       
       # returns the routing string, given a class and method. delegating. 
-      def queue_for(clazz, method)
+       def queue_for(clazz, method)
         ClassAndMethodRouting.queue_for(clazz, method)
       end
               
       # returns the routing string, given a class and method.
       def self.queue_for(clazz, method)
-        "#{ clazz.to_s.tableize }/#{ method }".split("/").join("__") # Don't split with : because it messes up memcache stats
+        if clazz.is_a? String
+          "#{ clazz.snake_case }/#{ method }".split("/").join("__") # Don't split with : because it messes up memcache stats
+        else
+          "#{ clazz.name.snake_case }/#{ method }".split("/").join("__") # Don't split with : because it messes up memcache stats
+        end
       end
       
       # returns all routed

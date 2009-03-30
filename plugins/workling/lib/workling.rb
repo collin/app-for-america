@@ -22,7 +22,7 @@ module Workling
   class << self
     attr_accessor :load_path
   end
-  self.load_path = [ File.expand_path(File.join(File.dirname(__FILE__), '../../../../app/workers')) ]
+  self.load_path = [ Merb.root/'app/workers' ]
   VERSION = "0.4.2.3"
   
   #
@@ -53,7 +53,7 @@ module Workling
   #
   def self.find(clazz, method = nil)
     begin
-      inst = clazz.to_s.camelize.constantize.new 
+      inst = Object.const_get(clazz.to_s.camel_case).new 
     rescue NameError
       raise_not_found(clazz, method)
     end
@@ -127,7 +127,7 @@ module Workling
       config_path = File.join(Merb.root, 'config', 'workling.yml')
       @@config ||=  YAML.load_file(config_path)[Merb.env || 'development'].symbolize_keys!
       @@config[:memcache_options].symbolize_keys! if @@config[:memcache_options]
-      @@config 
+      @@config.to_mash
     rescue
        # config files could not be read correctly
       raise ConfigurationError.new
@@ -144,7 +144,7 @@ module Workling
   self.raise_exceptions = (Merb.env == "test" || Merb.env == "development")
   
   def self.raise_exceptions?
-    @@raise_exceptions
+    @raise_exceptions
   end
   
   private

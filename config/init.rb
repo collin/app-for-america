@@ -20,9 +20,24 @@ Merb::BootLoader.before_app_loads do
   require Merb.root/'lib/ext/std'
   Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib } 
   Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib }
+  
+  require Merb.root/'plugins/workling/lib/workling/base'
+  require Merb.root/'plugins/workling/lib/workling/discovery'
 end
  
 Merb::BootLoader.after_app_loads do
+  $LOAD_PATH << Merb.root/'plugins/workling/lib'
+  require Merb.root/'plugins/workling/lib/workling'
+  require Merb.root/'plugins/workling/lib/workling/base'
+  require Merb.root/'plugins/workling/lib/workling/discovery'
+  require Merb.root/'plugins/workling/lib/workling/remote/invokers/basic_poller'
+  require Merb.root/'plugins/workling/lib/workling/remote/invokers/threaded_poller'
+  require Merb.root/'plugins/workling/lib/workling/remote/invokers/eventmachine_subscriber'
+  require Merb.root/'plugins/workling/lib/workling/routing/class_and_method_routing'
+  require Merb.root/'plugins/workling/lib/workling/remote'
+  require Merb.root/'plugins/workling/init'
+
+  Dir.glob(Merb.root/'app/workers/*.rb').each{|lib| require lib }
   Sunlight::Base.api_key = Merb::Config[:secrets][:sunlight]
   class Calais; def license_id; Merb::Config[:secrets][:calais] end end
 end

@@ -12,11 +12,14 @@ module Workling
   module Remote
     
     # set the desired runner here. this is initialized with Workling.default_runner. 
-    mattr_accessor :dispatcher
+    class << self 
+      attr_accessor :dispatcher
+
+      # set the desired invoker. this class grabs work from the job broker and executes it. 
+      attr_accessor :invoker
+    end
     
-    # set the desired invoker. this class grabs work from the job broker and executes it. 
-    mattr_accessor :invoker
-    @@invoker ||= Workling::Remote::Invokers::ThreadedPoller
+    self.invoker ||= Workling::Remote::Invokers::ThreadedPoller
     
     # retrieve the dispatcher or instantiate it using the defaults
     def self.dispatcher
@@ -26,7 +29,7 @@ module Workling
     # generates a unique identifier for this particular job. 
     def self.generate_uid(clazz, method)
       uid = ::Digest::MD5.hexdigest("#{ clazz }:#{ method }:#{ rand(1 << 64) }:#{ Time.now }")
-      "#{ clazz.to_s.tableize }/#{ method }/#{ uid }".split("/").join(":")
+      "#{ clazz.to_s.snake_case }/#{ method }/#{ uid }".split("/").join(":")
     end
     
     # dispatches to a workling. writes the :uid for this work into the options hash, so make 
