@@ -17,8 +17,9 @@ Merb::Config.use do |c|
 end
  
 Merb::BootLoader.before_app_loads do
+  require Merb.root/'lib/ext/std'
   Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib } 
-  Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib }  
+  Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib }
 end
  
 Merb::BootLoader.after_app_loads do
