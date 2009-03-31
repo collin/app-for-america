@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+raise "YOU HAVE TO SPECIFY HOW MANY ./workling 80(-gazillion <- joke)" unless ARGV[0] 
+require 'rubygems'
+require 'pathname'
+
+
+class Workling < Pathname
+  attr_accessor :id
+  
+  def initialize id
+    self.id = id
+    super "./log/merb.workling.#{id}.pid"
+  end
+  
+  def running?
+    return false unless exist?
+    return false if `pgrep #{read}`.strip == ""
+    true
+  end
+  
+  def start
+    puts "stopping #{to_s}"
+    system "merb -d -P #{to_s} -r workling.rb"
+  end
+  
+  def stop
+    puts "stopping #{to_s}"
+    system "merb -K workling.#{id}"
+  end
+  
+  def restart
+    stop
+    start
+  end
+  
+  def checkup
+    restart unless running?
+  end
+end
+
+workers = []
+ARGV[0].to_i.times do |id|
+  workers << Workling.new(id)
+end
+
+while true do
+  workers.each do |worker|
+    worker.checkup
+  end
+  puts "checkup finished, see you again in 60 seconds"
+  sleep 60
+end
+
+trap("INT") do; workers.each{|w| w.stop } end
+
