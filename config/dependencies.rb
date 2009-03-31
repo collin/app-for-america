@@ -34,7 +34,7 @@ dependency "dm-serializer", dm_gems_version
 dependency "merb_datamapper", merb_gems_version
 
 dependency "httparty"
-dependency "luigi-sunlight", :require_as => "sunlight"
+dependency "-sunlight", "0.1.0"
 
 dependency "hpricot"
 require 'iconv'
