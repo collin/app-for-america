@@ -18,5 +18,3 @@ Merb.root = Merb::Config[:merb_root]
 Merb::BootLoader.run
  
 run Merb::Rack::Application.new
-
-
