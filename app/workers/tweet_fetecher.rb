@@ -11,7 +11,7 @@ class TweetFetcher < Workling::Base
   end
   
   def self.full_historical_search lawmaker
-   90.times do |number_of|
+   30.times do |number_of|
       day = number_of.days.ago
       next if lawmaker.tweets.for_day(day).count > 0
       TweetFetcher.async_fetch_tweets :subject => lawmaker, :day => day
