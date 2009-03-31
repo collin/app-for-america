@@ -4,7 +4,7 @@ class Lawmakers < Application
     render
   end
 
-  def get id
+  def show id
     @lawmaker = Lawmaker.get(id)
     display @lawmaker
   end
