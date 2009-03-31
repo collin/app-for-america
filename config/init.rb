@@ -15,9 +15,15 @@ Merb::Config.use do |c|
   # cookie session store configuration
   c[:session_secret_key]  = c[:secrets][:session]  # required for cookie session store
   c[:session_id_key] = '_app_for_america_session_id' # cookie session id key, defaults to "_session_id"  
+
+  c[:compass] = {
+    :stylesheets => 'app/stylesheets',
+    :compiled_stylesheets => 'public/stylesheets/compiled'
+  }
 end
  
 Merb::BootLoader.before_app_loads do
+
   require Merb.root/'lib/ext/std'
   Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib } 
   Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib }
