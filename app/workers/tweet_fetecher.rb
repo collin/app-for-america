@@ -3,8 +3,7 @@ class TweetFetcher < Workling::Base
     Twitter::Search.one_day_search options[:subject], options[:day]
   end
 
-  def self.full_historical_search_all
-    id = 0
+  def self.full_historical_search_all id=0
     while(lawmaker = Lawmaker.first(:id.gt => id)) do
       full_historical_search lawmaker
       id = lawmaker.id
