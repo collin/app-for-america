@@ -34,7 +34,6 @@ dependency "dm-serializer", dm_gems_version
 dependency "merb_datamapper", merb_gems_version
 
 dependency "httparty"
-dependency "luigi-sunlight", :require_as => "sunlight"
 
 dependency "hpricot"
 require 'iconv'
@@ -43,3 +42,4 @@ dependency "haml", ">=2.1.0"
 dependency "merb-haml", merb_gems_version
 dependency "chriseppstein-compass", :require_as => 'compass' 
 
+require 'lib/sunlight/lib/sunlight'
