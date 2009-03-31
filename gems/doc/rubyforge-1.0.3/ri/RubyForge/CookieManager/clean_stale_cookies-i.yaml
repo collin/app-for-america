@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: RubyForge::CookieManager#clean_stale_cookies
+is_singleton: false
+name: clean_stale_cookies
+params: ()
+visibility: public

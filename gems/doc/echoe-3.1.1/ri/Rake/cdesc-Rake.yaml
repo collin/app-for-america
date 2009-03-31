@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Redefine instead of chain a Rake task http://www.bigbold.com/snippets/posts/show/2032
+constants: []
+
+full_name: Rake
+includes: []
+
+instance_methods: []
+
+name: Rake
+superclass: 

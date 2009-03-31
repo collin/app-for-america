@@ -1,0 +1,886 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: author
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: author
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: bin_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: bin_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: certificate_chain
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: certificate_chain
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: changelog
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: changelog
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: changelog_patterns
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: changelog_patterns
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: changes
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: changes
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: clean_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: clean_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: dependencies
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: dependencies
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: description
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: description
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: development_dependencies
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: development_dependencies
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: docs_host
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: docs_host
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: email
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: email
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: eval
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: eval
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: executable_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: executable_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: extension_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: extension_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: extensions
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: extensions
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: extra_deps
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: extra_deps
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: gem_bin
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: gem_bin
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: gemspec_format
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: gemspec_format
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: gemspec_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: gemspec_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: has_rdoc
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: has_rdoc
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: ignore_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: ignore_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: include_gemspec
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: include_gemspec
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: include_rakefile
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: include_rakefile
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: install_message
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: install_message
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: lib_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: lib_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: manifest_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: manifest_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_gem
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_gem
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_tar_gz
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_tar_gz
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_tgz
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_tgz
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_zip
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: need_zip
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: platform
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: platform
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: private_key
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: private_key
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: project
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: project
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rakefile_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rakefile_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: rcov_options
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: rcov_options
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: rdoc_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: legacy
+  name: rdoc_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rdoc_options
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rdoc_options
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: rdoc_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: rdoc_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: rdoc_template
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: rdoc_template
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: require_signed
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: require_signed
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: retain_gemspec
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: retain_gemspec
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: ruby_version
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: ruby_version
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rubyforge_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rubyforge_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rubygems_version
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: rubygems_version
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: runtime_dependencies
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: runtime_dependencies
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: spec
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: spec
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: summary
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: summary
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: test_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: test_files
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: test_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: test_pattern
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: url
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: url
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: use_sudo
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: best left alone
+  name: use_sudo
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: version
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: user-configurable
+  name: version
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: silence
+- !ruby/object:RI::MethodSummary 
+  name: silence
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Echoe includes some optional accessors for more advanced gem configuration.
+- !ruby/struct:SM::Flow::P 
+  body: "For example, a simple <tt>Rakefile</tt> might look like this:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  require 'echoe'\n\n  Echoe.new(&quot;uncapitalizer&quot;) do |p|\n    p.author = &quot;Evan Weaver&quot;\n    p.summary = &quot;A library that uncapitalizes strings.&quot;\n    p.url = &quot;http://www.uncapitalizer.com&quot;\n    p.docs_host = &quot;uncapitalizer.com:~/www/files/doc/&quot;\n    p.runtime_dependencies = [&quot;string_tools &gt;=1.4.0&quot;]\n  end\n"
+- !ruby/struct:SM::Flow::P 
+  body: See below for the full list.
+- !ruby/struct:SM::Flow::H 
+  level: 2
+  text: Signing gems
+- !ruby/struct:SM::Flow::P 
+  body: "Echoe supports signing gems. First, create yourself a public and private key:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  gem cert --build you@yourmail.com\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Move them somewhere secret, and add the following environment variables in your <tt>.bash_profile</tt> or similar:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  export GEM_PRIVATE_KEY='/secret/path/to/gem-private_key.pem'\n  export GEM_CERTIFICATE_CHAIN='/secret/path/to/gem-public_cert.pem'\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Make sure your environment is up-to-date:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  source ~/.bash_profile\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Upload your <tt>public_cert.pem</tt> file to your website or Rubyforge project, and tell your users to add that certificate to their system via:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  gem cert --add /path/to/public_cert.pem\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Finally, package and release your project as normal. Now users can install your gem via:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  sudo gem install gemname -P HighSecurity\n"
+- !ruby/struct:SM::Flow::P 
+  body: Note that you can also set the key and certificate locations in the Rakefile itself. Finally, you can add <tt>p.require_signed = true</tt> to your <tt>Rakefile</tt> so that you don't accidentally release an unsigned gem if your key is missing.
+- !ruby/struct:SM::Flow::H 
+  level: 2
+  text: Metadependencies
+- !ruby/struct:SM::Flow::P 
+  body: Echoe does not force packages to depend on Echoe itself. Instead, it generates a <tt>gemspec</tt> from your <tt>Rakefile</tt> and includes that. Downstream repackagers can use the <tt>gemspec</tt> as-is to build new versions of your gem even without Echoe.
+- !ruby/struct:SM::Flow::P 
+  body: However, Echoe is added to the <tt>development_dependencies</tt> array so that users can automatically install it via <tt>gem install --development</tt> if they prefer. You can override this behavior by setting <tt>p.development_dependencies = []</tt>.
+- !ruby/struct:SM::Flow::H 
+  level: 2
+  text: Cross-packaging
+- !ruby/struct:SM::Flow::P 
+  body: Echoe supports platform Rake targets to allow you to cross-package your gems. Just write the spec assuming <tt>RUBY_PLATFORM</tt> will be what you need it to be for each architecture, and then invoke Rake with the platform name when you're cross-packaging.
+- !ruby/struct:SM::Flow::P 
+  body: For example, on JRuby, <tt>rake package</tt> will build a generic <tt>-ruby</tt> type gem. But if you want to include a Java-specific extension, you can do one of two things. You can package from within JRuby by checking if <tt>RUBY_PLATFORM =~ /java/</tt> and setting <tt>p.platform = jruby</tt>, or you can run <tt>rake java package</tt>, which will set <tt>RUBY_PLATFORM</tt> and <tt>p.platform</tt> for you.
+- !ruby/struct:SM::Flow::P 
+  body: This way you can run <tt>rake java package</tt>, <tt>rake aix install</tt>, or whatever task you need and Echoe will behave just like you're packaging from within the target platform.
+- !ruby/struct:SM::Flow::H 
+  level: 2
+  text: Test environment setup and teardown
+- !ruby/struct:SM::Flow::P 
+  body: For some applications, you may need to setup and teardown environment state for the entire test suite. This is especially common for integration tests that may need to spawn an external daemon. To support this, you can add a file <tt>tests/setup.rb</tt> and it will be silently executed before the entire suite runs. Add a similar file <tt>tests/teardown.rb</tt> in your app to be executed at the end of the entire run.
+- !ruby/struct:SM::Flow::P 
+  body: Note; these files will only get executed if you run the tests via <tt>rake</tt>. Also, you can set the environment variable <tt>VERBOSE=1</tt> to not hide the setup/teardown output.
+- !ruby/struct:SM::Flow::H 
+  level: 2
+  text: Accessor options
+- !ruby/struct:SM::Flow::P 
+  body: "Descriptive options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>author</tt> - Your name.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>email</tt> - Your email address.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>description</tt> - A more detailed description of the library.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>summary</tt> - A shorter description of the library.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>url</tt> - A url for the library.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>install_message</tt> - A message to display after the gem is installed.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "Versioning options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>version</tt> - A string for the version number. Parsed from CHANGELOG otherwise.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>changes</tt> - A string describing the most recent changes. Parsed from CHANGELOG otherwise.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "Common packaging options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>runtime_dependencies</tt> - An array of runtime dependencies for this gem. For example, <tt>['mongrel', 'activesupport &gt;= 2.0.2']</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>development_dependencies</tt> - An array of development dependencies for this gem. For example, <tt>['rake &gt;=0.7.1']</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>extension_pattern</tt> - A filename array, glob array, or regex for extension files that need to be run at install time. Defaults to <tt>&quot;ext/**/extconf.rb&quot;</tt>.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "Testing options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>clean_pattern</tt> - A filename array, glob array, or regex for files that should be removed when <tt>rake clean</tt> is run.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>test_pattern</tt> - A filename array, glob array, or regex for test runners. Overridden by <tt>&quot;test/test_all.rb&quot;</tt>, if it exists.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>rcov_options</tt> - Any extra flags to pass to RCov when coverage reports are run.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "Uncommon packaging options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>platform</tt> - What platform this gem is for.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>manifest_name</tt> - The name of the manifest file. Defaults to <tt>Manifest</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>need_gem</tt> - Whether to generate a gem package. Defaults to <tt>true</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>need_tar_gz</tt> - Whether to generate a <tt>.tar.gz</tt> package. Defaults to <tt>true</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>need_tgz</tt> - Whether to generate a <tt>.tgz</tt> package. Defaults to <tt>false</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>need_zip</tt> - Whether to generate a <tt>.zip</tt> package. Defaults to <tt>false</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>include_rakefile</tt> - Include the Rakefile directly within the package. Defaults to <tt>true</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>include_gemspec</tt> - Include the generated gemspec file within the package. Defaults to <tt>true</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>ruby_version</tt> - Version string for which Ruby to require (for example, <tt>'&gt;= 1.8.4'</tt>.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>eval</tt> - Accepts a proc to be evaluated in the context of the Gem::Specification object. This allows you to set more unusual gemspec options.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>ignore_pattern</tt> - A filename array, glob array, or regex for pathnames that should be ignored when building the manifest.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>executable_pattern</tt> - A filename array, glob array, or regex for files that should be installed as wrapped executables.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "Security options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>private_key</tt> - The path to your gem private key. Defaults to ENV['GEM_PRIVATE_KEY'], if available. This accessor is not published in the resulting gemspec.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>certificate_chain</tt> - An array representing your certificate authorization chain. If no one else has signed your certificate, just set it to your own cert. Defaults to ENV['GEM_CERTIFICATE_CHAIN'], if available. This accessor is not published in the resulting gemspec.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>require_signed</tt> - Force Echoe to refuse to package your gem if it's not properly signed. Default false.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "Publishing options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>project</tt> - The name of the Rubyforge project to upload to. Defaults to the name of the gem.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>docs_host</tt> - A host and filesystem path to publish the documentation to. Defaults to the Rubyforge project.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "Documentation options:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>rdoc_pattern</tt> - A filename array, glob array, or regex for filenames that should be passed to RDoc.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>rdoc_template</tt> - A path to an RDoc template. Defaults to the generic template.
+  type: :BULLET
+constants: []
+
+full_name: Echoe
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: apply_pattern
+- !ruby/object:RI::MethodSummary 
+  name: apply_pattern
+- !ruby/object:RI::MethodSummary 
+  name: define_tasks
+- !ruby/object:RI::MethodSummary 
+  name: define_tasks
+name: Echoe
+superclass: Object

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: RubyForge::Client#cookie_store=
+is_singleton: false
+name: cookie_store=
+params: (path)
+visibility: public

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>README
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Mon Mar 30 23:38:57 -0500 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+<a href="../classes/Echoe.html">Echoe</a>
+</p>
+<p>
+A Rubygems packaging tool that provides <a
+href="../classes/Rake.html">Rake</a> tasks for documentation, extension
+compiling, testing, and deployment.
+</p>
+<h2>License</h2>
+<p>
+Copyright 2007, 2008 Cloudburst, LLC. Licensed under the AFL 3. See the
+included LICENSE file. Portions copyright 2006 Ryan Davis/Zen Spider
+Software and used with permission. See the included MIT-LICENSE file.
+</p>
+<p>
+The public certificate for the gem is <a
+href="http://rubyforge.org/frs/download.php/25331/evan_weaver-original-public_cert.pem">here</a>.
+</p>
+<p>
+If you use this software, please <a
+href="http://blog.evanweaver.com/donate/">make a donation</a>, or <a
+href="http://www.workingwithrails.com/person/7739-evan-weaver">recommend
+Evan</a> at Working with Rails.
+</p>
+<h2>Features</h2>
+<ul>
+<li>simple configuration
+
+</li>
+<li>comprehensive gem deployment
+
+</li>
+<li>cross-packaging
+
+</li>
+<li>signed gem support
+
+</li>
+<li>automatic changeset parsing
+
+</li>
+<li>documentation upload to any host
+
+</li>
+</ul>
+<h1>Usage</h1>
+<h2>Installation</h2>
+<p>
+Install the gem:
+</p>
+<pre>
+  sudo gem install echoe
+</pre>
+<p>
+If you haven&#8216;t already, make sure Rubyforge is configured locally and
+your password is correctly set:
+</p>
+<pre>
+  rubyforge setup
+  rubyforge config
+</pre>
+<h2>Project configuration</h2>
+<p>
+Organize your gem according to the usual structure:
+</p>
+<pre>
+  lib/
+  README
+  LICENSE
+  CHANGELOG
+  Rakefile
+</pre>
+<p>
+You can add the <tt>bin/</tt> or <tt>ext/</tt> folders if you have
+executables or extensions, respectively.
+</p>
+<p>
+Your <tt>CHANGELOG</tt> should be formatted as follows (including
+newlines):
+</p>
+<pre>
+  v2.1. newest change
+
+  v2. older change
+
+  v1.9. oldest change
+</pre>
+<p>
+This way <a href="../classes/Echoe.html">Echoe</a> can parse the latest
+version and changeset message automatically.
+</p>
+<p>
+Your <tt>Rakefile</tt> needs the following minimal contents:
+</p>
+<pre>
+  require 'echoe'
+  Echoe.new('gem_name')
+</pre>
+<p>
+More advanced configuration is described in the <a
+href="../classes/Echoe.html">Echoe</a> class.
+</p>
+<h2>Deploying your gem</h2>
+<p>
+To deploy the gem and documentation:
+</p>
+<pre>
+  rake manifest
+  rake release
+  rake publish_docs
+</pre>
+<p>
+Once you&#8216;ve built your manifest, you only need to rebuild it if you
+add or remove files from the package structure.
+</p>
+<h1>Extras</h1>
+<h2>All <a href="../classes/Rake.html">Rake</a> tasks</h2>
+<p>
+The following tasks are made available to your gem.
+</p>
+<p>
+Packaging:
+</p>
+<ul>
+<li><tt>manifest</tt> - Build a manifest list. Shows added and removed files.
+
+</li>
+<li><tt>docs</tt> - Build the documentation.
+
+</li>
+<li><tt>package</tt> - Build all the packages.
+
+</li>
+</ul>
+<p>
+Testing:
+</p>
+<ul>
+<li><tt>test</tt> - Run the test suite.
+
+</li>
+<li><tt>coverage</tt> - Generate a coverage report.
+
+</li>
+<li><tt>compile</tt> - Compile C extensions, if available.
+
+</li>
+<li><tt>clean</tt> - Clean up generated documentation, packaging, and build
+files.
+
+</li>
+<li><tt>install</tt> - Install the gem locally.
+
+</li>
+<li><tt>uninstall</tt> - Uninstall the gem.
+
+</li>
+</ul>
+<p>
+Upload:
+</p>
+<ul>
+<li><tt>publish_docs</tt> - Publish documentation to the web.
+
+</li>
+<li><tt>release</tt> - Package and upload the latest release to Rubyforge.
+
+</li>
+<li><tt>announce</tt> - Generate a release announcement, edit it, and post it
+to Rubyforge.
+
+</li>
+</ul>
+<p>
+Cleaning:
+</p>
+<ul>
+<li><tt>clean</tt> - Delete all the generated documentation and packages.
+
+</li>
+<li><tt>redocs</tt> - Force a rebuild of the Rdoc files.
+
+</li>
+<li><tt>repackage</tt> - Force a rebuild of the package files.
+
+</li>
+</ul>
+<h2>Reporting problems</h2>
+<p>
+The support forum is <a
+href="http://rubyforge.org/forum/forum.php?forum_id=13986">here</a>.
+</p>
+<p>
+Patches and contributions are very welcome. Please note that contributors
+are required to assign copyright for their additions to Cloudburst, LLC.
+</p>
+<h2>Further resources</h2>
+<ul>
+<li><a
+href="http://blog.evanweaver.com/articles/2007/01/10/if-you-dont-want-to-hoe-echoe">blog.evanweaver.com/articles/2007/01/10/if-you-dont-want-to-hoe-echoe</a>
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

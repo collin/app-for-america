@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: CHANGELOG</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>CHANGELOG</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>CHANGELOG
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Mon Mar 30 23:38:57 -0500 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+v3.1.1. Remove <a href="../classes/Rake.html">Rake</a>/contrib from the gem
+requirements and vendor it. Fix some load paths on Ruby 1.9.
+</p>
+<p>
+v3.1. Fix some bugs; become Ruby 1.9 compatible.
+</p>
+<p>
+v3.0.2. Support for alternative Rakefile naming.
+</p>
+<p>
+v3.0.1. Compatibility with Rubygems 1.3.
+</p>
+<p>
+v3. Compatibility with Rubyforge 1.0.0 and Rubygems 1.2.
+</p>
+<p>
+v2.7.13. Avoid Rubyforge 1.0.0 which seems broken.
+</p>
+<p>
+v2.7.12. Respect system EDITOR setting (osteele).
+</p>
+<p>
+v2.7.11. Include <a href="../classes/Platform.html">Platform</a> module for
+abstracting RUBY_PLATFORM regex checks (luislavena).
+</p>
+<p>
+v2.7.10. Include RDoc options in generated gemspec (Rob McKinnon).
+</p>
+<p>
+v2.7.9. Fix redefine task helper for new <a
+href="../classes/Rake.html">Rake</a>.
+</p>
+<p>
+v2.7.8. Better default test pattern.
+</p>
+<p>
+v2.7.7. Don&#8216;t use sudo on win32/cygwin (Kevin Williams).
+</p>
+<p>
+v2.7.6. Better <a href="../classes/Echoe.html#M000174">Echoe.silence</a>
+behavior.
+</p>
+<p>
+v2.7.5. Fix bug when MultiRails isn&#8216;t installed; remove
+&quot;test&quot; from platform targets.
+</p>
+<p>
+v2.7.4. Ensured teardown.rb just like setup.rb. Load multi_rails
+automatically if its available. ENV[&#8216;VERBOSE&#8217;] obeyed for <a
+href="../classes/Echoe.html#M000174">Echoe.silence</a>.
+</p>
+<p>
+v2.7.3. Put some handy things in lib/echoe/extensions.rb; use
+Rake::TestTask instead of screwing around in the shell. Automatically run
+test/setup.rb before the test task, if it exists.
+</p>
+<p>
+v2.7.2. Don&#8216;t try to verify the existence of the RDoc template. Fixes
+for the RCov task.
+</p>
+<p>
+v2.7.1. Rcov changed to a weak dependency for JRuby.
+</p>
+<p>
+v2.7.0. Add coverage task; change default test pattern; Rubygems 0.9.4.5
+compatibility and requirement. Cross-packaging hacks for same. Add
+rubygems_version accessor. Manifest alerts about removed files now as well
+as added. Allow targeting of every platform on RubyGems 0.9.5.
+</p>
+<p>
+v2.6.4. Fix related issue.
+</p>
+<p>
+v2.6.3. Fix issue with shared object paths in :compile task.
+</p>
+<p>
+v2.6.2. Fix executable pattern bug; use a better default clean pattern.
+</p>
+<p>
+v2.6. Unify pattern handling; changelog accessor, version accessor, expand
+paths of keys and certificates; support verbose (Rails-style) changelogs.
+</p>
+<p>
+v2.5. Add some extension building tasks; adjust clean behavior; rdoc
+inclusions definitely depend on Manifest now; ruby_version accessor;
+ignore_pattern for skipping files during the manifest build; bugfixes.
+</p>
+<p>
+v2.4.1. Manifest doesn&#8216;t require itself (willcodeforwork).
+</p>
+<p>
+v2.4. Sign gems automatically if ENV[&#8216;GEM_PRIVATE_KEY&#8217;] is
+present; add certificate_chain and private_key accessors.
+</p>
+<p>
+v2.3. Work around metadependencies issue by including gemspecs instead of
+Rakefiles by default; include_gemspec and include_rakefile accessors.
+</p>
+<p>
+v2.2. Need_gem option; announce task.
+</p>
+<p>
+v2.1. Adjust default RDoc include pattern; extra_deps now dependencies;
+rubyforge_name now project; support install messages; manifest instead of
+build_manifest.
+</p>
+<p>
+v2. Support documentation hosts other than rubyforge; auto-load CHANGELOG
+contents; remove bin/echoe which doesn&#8216;t work anyway. Incompatible
+changes.
+</p>
+<p>
+v1.4. Auto-detect readme file; make rdoc default pattern compatible with
+manifest generator; fix publish_docs task.
+</p>
+<p>
+v1.3. Avoid rubyforge gem multi-activation conflict.
+</p>
+<p>
+v1.2. build_manifest <a href="../classes/Rake.html">Rake</a> task.
+</p>
+<p>
+v1.1. Sane error messages on releasing new or duplicate gems; allow
+Manifest to not end in .txt.
+</p>
+<p>
+v1.0. Fork from Hoe.
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
