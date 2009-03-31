@@ -20,7 +20,7 @@ class Workling < Pathname
   end
   
   def start
-    puts "stopping #{to_s}"
+    puts "starting #{to_s}"
     system "merb -d -P #{to_s} -r workling.rb"
   end
   
