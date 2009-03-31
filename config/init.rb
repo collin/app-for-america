@@ -7,6 +7,7 @@ use_test :rspec
 use_template_engine :haml
  
 Merb::Config.use do |c|
+  Merb::Config[:secrets] = YAML.load(File.read(Merb.root/'config/secrets.yml'))
   c[:use_mutex] = false
   c[:session_store] = 'cookie'  # can also be 'memory', 'memcache', 'container', 'datamapper
   
