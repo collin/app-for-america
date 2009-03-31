@@ -3,8 +3,8 @@
 development: &defaults
   # These are the settings for repository :default
   adapter:  mysql
-  database: app_for_america_development
-  host: localhost
+  database: app_for_america_production
+  host: tweettracking.com
   username: root
   password: 
  
@@ -26,7 +26,7 @@ test:
  
 production:
   <<:       *defaults
-  database: production.db
+  database: app_for_america_production
  
   # repositories:
   #   repo1:

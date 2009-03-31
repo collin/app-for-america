@@ -7,7 +7,6 @@ use_test :rspec
 use_template_engine :haml
  
 Merb::Config.use do |c|
-  c[:secrets] = YAML.load(File.read(Merb.root/'config/secrets.yml'))
   c[:use_mutex] = false
   c[:session_store] = 'cookie'  # can also be 'memory', 'memcache', 'container', 'datamapper
   
@@ -17,6 +16,7 @@ Merb::Config.use do |c|
 end
  
 Merb::BootLoader.before_app_loads do
+  Merb::Config[:secrets] = YAML.load(File.read(Merb.root/'config/secrets.yml'))
   require Merb.root/'lib/ext/std'
   Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib } 
   Dir.glob(Merb.root/'lib/*.rb').each{|lib| require lib }

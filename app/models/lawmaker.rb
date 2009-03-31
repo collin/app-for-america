@@ -69,6 +69,14 @@ class Lawmaker
     query
   end
 
+  def placard
+    "#{title} #{firstname} #{lastname}"
+  end
+  
+  def twitters?
+    not twitter_id.blank?
+  end
+
   def self.create_from_sunlight_legistor legislator
     lawmaker = new
     legislator.instance_variables.each do |var|
