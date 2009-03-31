@@ -6,6 +6,15 @@
 
 -#if @lawmaker.twitters?
 
+%ol.from_state
+  -for lawmaker in @lawmaker.from_same_state
+    %li[lawmaker]
+      %h3=h @lawmaker.placard
+      %p
+        %em{:class => h(@lawmaker.party)}=h @lawmaker.party
+        =h "#{@lawmaker.state}-#{@lawmaker.district}"
+      
+
 %ol.tweets
   -for tweet in @tweets
     %li{:id => tweet.id}

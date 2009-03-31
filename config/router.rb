@@ -4,4 +4,8 @@ Merb::Router.prepare do
   slice(:merb_auth_slice_password, :name_prefix => nil, :path_prefix => "")
 
   resources :lawmakers
+  
+  match('/').
+    to(:controller => Welcome, :action => :index).
+    name(:default)
 end

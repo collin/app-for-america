@@ -77,6 +77,10 @@ class Lawmaker
     not twitter_id.blank?
   end
 
+  def from_same_state
+    Lawmakers.find(:state => self.state) - [self]
+  end
+
   def self.create_from_sunlight_legistor legislator
     lawmaker = new
     legislator.instance_variables.each do |var|
