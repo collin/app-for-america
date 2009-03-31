@@ -1,2 +1,24 @@
 %div[@lawmaker]
   %h1=h @lawmaker.placard
+  %p
+    %em{:class => h(@lawmaker.party)}=h @lawmaker.party
+    =h "#{@lawmaker.state}-#{@lawmaker.district}"
+
+-#if @lawmaker.twitters?
+
+%ol.tweets
+  -for tweet in @tweets
+    %li{:id => tweet.id}
+      .thumb
+        %img{:src => tweet.profile_image_url}
+      .tweet
+        %span.who
+          =link_to tweet.from_user, tweet.from_user_url
+        %span
+          =interpret_tweet tweet.text, @tweet_highlight
+        %span.when
+          =link_to "#{time_ago_in_words tweet.created_at} ago", tweet.status_url
+          from
+          =CGI.unescapeHTML tweet.source
+        .actions= link_to " ", tweet.reply_url, :class => :reply
+

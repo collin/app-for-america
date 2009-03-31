@@ -6,6 +6,7 @@ class Lawmakers < Application
 
   def show id
     @lawmaker = Lawmaker.get(id)
+    @tweets   = @lawmaker.tweets(:order => [:id.desc], :limit => 15)
     display @lawmaker
   end
   

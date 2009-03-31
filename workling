@@ -5,28 +5,29 @@ require 'rubygems'
 require 'pathname'
 
 
+
 class Workling < Pathname
   attr_accessor :id
   
   def initialize id
     self.id = id
-    super "./log/merb.workling.#{id}.pid"
+    super "#{File.dirname(__FILE__)}/log/merb.workling.#{id}.pid"
   end
   
   def running?
     return false unless exist?
-    return false if `pgrep #{read}`.strip == ""
+    return false if `ps -p #{read} | grep #{read}`.strip == ""
     true
   end
   
   def start
     puts "starting #{to_s}"
-    system "merb -d -P #{to_s} -r workling.rb"
+    system "cd #{File.dirname(__FILE__)} && merb -d -P #{to_s} -r ./workling.rb"
   end
   
   def stop
     puts "stopping #{to_s}"
-    system "merb -K workling.#{id}"
+    system "cd #{File.dirname(__FILE__)} && merb -K workling.#{id}"
   end
   
   def restart
